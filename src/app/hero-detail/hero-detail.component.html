@@ -1,0 +1,20 @@
+<div *ngIf="hero">
+    <h2 class="mb-3">{{ hero.name }} Detail</h2>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text">ID :</span>
+        </div>
+        <input type="text" class="form-control" placeholder="ID" [value]="hero._id" disabled>
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Name: </span>
+        </div>
+        <input type="text" class="form-control" placeholder="Name"  [(ngModel)]="hero.name">
+      </div>
+      <div class="input-group mb-3">
+        <button class="btn btn-outline-primary btn-sm mr-3" (click)="goBack()">Go Back</button>
+        <button class="btn btn-primary btn-sm" (click)="save()">Save</button>
+      </div>
+    
+</div>

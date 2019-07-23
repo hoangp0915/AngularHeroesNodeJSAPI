@@ -1,0 +1,9 @@
+<h2 class="mb-3">Add Hero</h2>
+<div class="form-group">
+    <label for="usr">Name: </label>
+    <input type="text" class="form-control" required placeholder="Enter name hero..." #inputHero (keyup.enter)="addHero(inputHero.value); inputHero.value = ''" >
+</div>
+<div class="form-group">
+    <button class="btn btn-outline-primary btn-sm mr-2" (click)="onBack()">Back</button>
+    <button class="btn btn-primary btn-sm" (click)="addHero(inputHero.value); inputHero.value = ''">Save</button>
+</div>

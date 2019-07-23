@@ -1,0 +1,16 @@
+<div class="input-group mb-3">
+    <div class="input-group-prepend">
+        <span class="input-group-text">Search: </span>
+    </div>
+    <input type="text" placeholder="Search..." [(ngModel)]="filterName" #searchBox (input)="searchHero(searchBox.value)"
+        class="form-control">
+</div>
+<ul class="list-group">
+    <li class="list-group-item d-flex justify-content-between align-items-center" *ngFor="let hero of heroes">
+        <a [routerLink]="[ '/heroes', hero._id ]"> {{hero.name}} </a>
+        <span class="badge badge-danger badge-pill">
+            <button (click)="delete(hero._id)" class="btn btn-danger btn-sm px-2">x</button>
+        </span>
+    </li>
+
+</ul>

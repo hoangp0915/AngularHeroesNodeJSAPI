@@ -1,0 +1,14 @@
+<div class="jumbotron pb-2 pt-3">
+    <div class="container">
+      <h1 class="display-3">{{title}}</h1>
+      <hr class="my-2">
+      <p class="lead">
+        <a class="btn btn-outline-primary btn-sm mr-2" [routerLink]="['/dashboard']" routerLinkActive="active"
+          role="button">Dashboard</a>
+        <a class="btn btn-outline-primary btn-sm mr-2" [routerLink]="['/heroes']" routerLinkActive="active"
+          role="button">Heroes</a>
+          <a class="btn btn-outline-primary btn-sm float-right" [routerLink]="['/add']" routerLinkActive="active"
+          role="button">Add Hero</a>
+      </p>
+    </div>
+  </div>
