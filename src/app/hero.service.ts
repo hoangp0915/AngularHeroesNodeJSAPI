@@ -34,7 +34,7 @@ export class HeroService {
   }
   addHero(hero: Hero): Observable<Hero>{
     return this.http.post<Hero>(this.urlApi, hero, httpOption);
-  }
+  } 
   searchHero(name: string):Observable<Hero[]>{
     const url = `${this.urlApi}/search/name=${name}`;
     return this.http.get<Hero[]>(url,httpOption);
